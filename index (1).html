@@ -1,0 +1,489 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+
+  <style>
+  
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      overflow-x: hidden
+    }
+    .com{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      background: #CCCDD5;
+      box-shadow: 4px 4px 12px black;
+      border-radius: 10px;
+      
+    }
+    .first li{
+      list-style: none;
+      margin-right: 20px;
+      transition: 0.7s ease;
+      transform: translateX(-600px)
+    }
+    span{
+      color: #BEC1E1
+    }
+    .b{
+      padding: 10px 10px;
+      transform: translateY(-200px)
+    }
+    .img2{
+      width: 220px;
+      border: 1px black solid;
+      display: block;
+      margin: 0 auto;
+      opacity: 0;
+      transform: translateX(-100%)
+    }
+   .a{
+     text-align: center;
+     margin-top: 20px;
+    text-transform: uppercase;
+    transform: translateX(-600px)
+    }
+    .text{
+      margin-top: 50px;
+      width: 100%;
+      line-height: 22px;
+      margin-left: 5px;
+        font-family: "Rakkas", serif;
+        font-weight: 100;
+        font-style: normal;
+        opacity: 0;
+        font-size: 20px;
+      overflow-y: hidden
+    }
+    .textt{
+      font-family: "Rakkas", serif;
+ font-weight: 100;
+ font-size: 20px;
+ overflow-y: hidden;
+ height: 600px;
+ max-height: 100%
+    }
+    mark{
+      text-transform: uppercase
+    }
+    .se{
+      display: flex
+    }
+    h3{
+      text-align: center;
+      margin-top: 13px
+    }
+    .to{
+      border: 2px black solid;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 20px;
+      position: absolute;
+      bottom: 8px;
+      font-weight: 900;
+      cursor: pointer;
+      
+    }
+    
+    #btn{
+      background: #42445A;
+      color: wheat;
+      border-radius: 12px;
+      height: 30px ;
+      margin-top: 40px
+    }
+    input{
+      width: 240px;
+      height: 30px;
+      margin-left: 15px;
+      display: none;
+      margin-top: 20px;
+      border: none;
+      outline: none;
+      background: #6096BA;
+      color: white;
+      font-weight: 700
+    }
+    input::placeholder {
+  color: white;
+  transform: translateX(20px);
+  font-size: 20px;
+  font-weight: 800
+}
+    #btn2{
+      background: #42445A;
+      color: wheat;
+      border-radius: 12px;
+      height: 30px ;
+     margin-top: 13px;
+     margin-left: 15px;;
+     display: none
+    }
+    .one{
+      text-decoration: underline;
+      transition: 2s ease
+    }
+    .one:hover{
+      text-decoration: none;
+      
+    }
+    
+    li:hover{
+      color: #6096BA;
+      
+    }
+    body{
+      padding: 0 4px;
+      height: 5000px;
+      
+    }
+    
+    #btn3{
+background: #42445A;
+      color: wheat;
+      border-radius: 12px;
+      height: 30px ;
+     margin-left: 90px;
+     transform: translateY(-26px);
+     display: none
+    }
+    .img{
+      width: 180px;
+      opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center
+    }
+    .ph{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px
+    }
+      .bg{
+    background: #B3B6B7;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000
+  }
+  #th{
+    font-size: 26px;
+   background: none;
+    width: 50px;
+    border: none;
+    outline: none;
+    margin-right: 12px
+  }
+  .look{
+    height: 35%;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    display: none;
+   background: #6A6A6A;
+   animation: slide 1s ease-out forwards;
+   position: fixed;
+  }
+  @keyframes slide{
+  0%{
+    transform: translateX(-180%);
+    opacity: 0
+  };
+  100%{
+    transform: translateX(0);
+    opacity: 1
+  }
+
+  }
+  #btns{
+    background: white;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 90%;
+    height: 32px;
+    border: none;
+    outline: none;
+    transition: 2s ease
+  }
+  #btns:hover{
+    background: #C8CAE6;
+  }
+  
+  .scr{
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    width: 100%
+  }
+  .home{
+  
+   color: #000000;
+  
+  
+    
+  }
+  
+  html{
+    scroll-behavior: smooth
+  }
+  .first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    
+  }
+  #btngh{
+      background: red;
+      color: white;
+      border: none;
+      position: fixed;
+      bottom: 20px;
+     right: 30px;
+     height: 40px;
+     width: 60px;
+     border-radius: 34px;
+     display: none;
+     cursor: pointer
+    }
+  .texts{
+    margin-top: 20px;
+    font-family: "Rakkas", serif;
+ font-weight: 100;
+ font-size: 20px;
+ overflow-y: hidden;
+ opacity: 0;
+ transform: translateX(-100%)
+  }
+.look-ul li a{
+  color: #FFFFFF;
+  text-decoration: none;
+  list-style: none
+}
+.look-ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+  gap: 20px;
+  text-transform: uppercase
+}
+hr{
+  width: 100%
+}
+
+
+  </style>
+</head>
+<body>
+      <button id="btngh">up</button>
+  <div class="contine">
+<div class="look">
+  <ul class="look-ul">
+    <li><a class="nm" href="">Portfolio DEVELOPER</a></li>
+    <hr>
+   <li><a href="https://www.facebook.com/groups/870469943124915/?ref=share&mibextid=NSMWBT">SCHOOL FACEBOOK</a></li>
+   <hr>
+       <li></li>
+
+  </ul>
+      <button id="btns">❌</button>
+</div>
+     <div class="bg"></div>
+  <div class="com">
+    <h2 class="b">HYP<span>ER</span></h2>
+  <nav>
+    <ul class="first">
+      <a href="#sec" class="home"><i class="fa-solid fa-house"></i></a>
+      <li><i class="fa-solid fa-address-card"></i></li>
+      <button id="th" class="th"><i class="fa-solid fa-bars"></i></button>
+    </ul>
+  </nav>
+  
+  </div>
+  <section>
+    <h1 class="a">Hyp<span>er</span> For <span>mat</span>hematics</h1>
+    <div class="se">
+    <div class="text">الرِّيَاضِيَّات هي مجموعة من المعارف المجردة الناتجة عن الاستنتاجات المنطقية المطبقة على مُختلف الكائنات الرياضية مثل المجموعات، والأعداد، والأشكال والبنيات والتحويلات. وتهتم الرياضيات أيضًا بدراسة مواضيع مثل الكمية(1) والبنية(2) والفضاء والتغير.(3) ولا يوجد حتى الآن تعريف عام متفق عليه.</div>
+    </div>
+    </div>
+  </section>
+    
+  <button id="btn">to send some notes</button>
+  <input id="input"  type="text" placeholder="notes">
+<button  id="btn2"  onclick="sendMessage()">to send</button>
+<button id="btn3">❌</button>
+<div class="ph">
+<img class="img"  src="/photo/Mathematics.png">
+</div>
+<div class="textt" id="sec">
+  يُعزّز الرياضيّات قدرة الإنسان على التفكير في مختلف الجوانب والظروف. يجعل الرياضيات نظرة الإنسان إلى أمور حياته أكثر فاعليةً؛ لأنّ الرياضيّات يتطلّب دراسة كافّة الجوانب المتعلّقة بالمسألة الحسابية لحلّها؛ لذا فإنّ ممارسة الرياضيّات تُساعد الإنسان في حياته اليومية على رؤية الأمور بشكل شاملالرياضيات هي قلب العلوم النابض، سواء كنا نتحدَّث عن الفيزياء أو الكيمياء أو البيولوجيا، أو حتى العلوم الإنسانية، ودائما ما يتميز العارف بالرياضيات في نطاقات واسعة من التخصصات، بل إن بعض الدراسات تقول إن هؤلاء الذين يتوترون بوجود الرياضيات في محيطهم يفشلون أكثر من غيرهم في إدارة شؤون حياتهم اليومية، خاصة إدارة المنزل والمصروفات والضرائب وغيرها، لكن في مقابل هذه الضرورة المُلِحَّة تواجه الرياضيات مشكلة كبيرة، وهي أنها عسيرة على التعلُّم.
+هل جرَّبت ذلك؟ يمكن أن تبدأ في الفيزياء وتستمر لشهر أو اثنين، ويمكن أن تبدأ في الفلسفة مثلا وتمل بعد عدة أسابيع، لكن مع الرياضيات يبدأ الأمر وينتهي في اليوم نفسه تقريبا، والسبب في ذلك أن مادة الرياضيات المعرفية بعيدة جدا عن حِسّنا المشترك، وتنزع للتجريد، ولا تحتوي على معانٍ أو أفكار يمكن استخلاصها، كذلك هناك سبب إضافي مهم، وهو أنه لا توجد مساقات أو كتب تُقدِّم الرياضيات للمبتدئين بسهولة النطاقات الأخرى
+</div>
+<img class="img2" src="/photo/1.webp">
+<div class="texts">
+يُساعد الرياضيات على تنمية الإدراك والتعبير عن الأفكار من خلال ما يأتي: تتطلّب ممارسة الرياضيّات وتطبيقاته القدرة على إدراك الترابط والتفكير بشكلٍ منطقيّ في المعادلات الرياضية والعمليّات الحسابية المختلفة، وهذه المهارات التي تتطوّر لدى الإنسان عندما يُمارس الرياضيّات تُمكّنه من فهم العالم من حوله بشكل منطقيّ.
+</div>
+
+</div>
+   
+</body>
+<script>
+
+  let btn = document.getElementById("btn")
+  let input = document.getElementById("input")
+  let bt = document.getElementById("btn2")
+btn.addEventListener("click",function(){
+  input.style.display = "block"
+  btn2.style.display = "block"
+  document.getElementById("btn3").style.display= "block"
+})
+// look btn c and o
+let bnc = document.getElementById("btns")
+let bno = document.getElementById("th")
+let look = document.querySelector(".look")
+
+bno.addEventListener('click',function(){
+  look.style.display = "block";
+  
+})
+bnc.addEventListener('click',function(){
+  look.style.display = "none";
+  
+})
+// end
+
+
+
+
+
+
+
+
+
+
+
+document.getElementById("btn3").addEventListener("click",function(){
+input.style.display = "none"
+  btn2.style.display = "none"
+  document.getElementById("btn3").style.display= "none"
+})
+
+//to send notes to bots
+  
+function sendMessage() {
+    let m = document.getElementById("input").value;
+    let apibot = "7581314096:AAFG3VALxb7_0MIkOuB8vnYQdCM0OuVfLHI"
+    let chatid = "1667351127";
+
+    let url = `https://api.telegram.org/bot${apibot}/sendMessage`;
+    let data = { chat_id: chatid, text: m };
+
+    fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        alert("تم الإرسال بنجاح!");
+    })
+    .catch(error => {
+        console.error("حدث خطأ:", error);
+        alert("حدث خطأ أثناء الإرسال");
+    })
+}
+
+//library gsap
+
+
+  gsap.to(".a",{
+    x: 4,
+    duration: 2,
+    delay: 1
+  })
+  gsap.to(".b",{
+    y: 4,
+    duration: 3
+  })
+  gsap.to(".text",{
+    opacity: 1,
+    delay: 3,
+    duration: 3
+  })
+  gsap.to(".bg",{
+          x: '100%',
+          duration: 2,
+          delay: 0.6 
+        })
+        gsap.to("li",{
+              x: 4,
+    duration: 2,
+    delay: 1
+        })
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.to(".texts", {
+    scrollTrigger:{
+      trigger: ".texts",
+      scrup: true,
+    },
+    opacity: 1,
+    x: 4,
+    delay: 1,
+    duration: 2
+});
+gsap.to(".img2", {
+    scrollTrigger:{
+      trigger: ".img2",
+    },
+    opacity: 1,
+    x: 4,
+    delay: 1,
+    duration: 2
+})
+        gsap.to(".img",{
+          opacity: 1,
+          delay: 3.6,
+        })
+      //look out
+var btnm = document.getElementById("btngh")
+    window.onscroll = function(){
+      if(window.scrollY >= 600){
+        btnm.style.display = "block"
+      }else{
+        btnm.style.display = "none"
+      }
+      
+    }
+    btnm.onclick = function(){
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+      })
+    }
+</script>
+</html>
